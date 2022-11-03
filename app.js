@@ -15,8 +15,28 @@ const sloganInput = document.getElementById('slogan-input');
 const sloganList = document.getElementById('slogan-list');
 
 /* State */
-
+let slogans = [];
+let locationCounter = 0;
+let architectureCounter = 0;
+let popularityCounter = 0;
 /* Events */
+locationSelect.addEventListener('change', (e) => {
+    const value = e.target.value;
+    locationImage.src = `./assets/location-${value}.jpeg`;
+    locationCounter++;
+});
+
+architectureSelect.addEventListener('change', (e) => {
+    const value = e.target.value;
+    architectureImage.src = `./assets/location-${value}.jpeg`;
+    architectureCounter++;
+});
+
+popularitySelect.addEventListener('change', (e) => {
+    const value = e.target.value;
+    popularityImage.src = `./assets/location-${value}.jpeg`;
+    popularityCounter++;
+});
 
 /* Display Functions */
 
