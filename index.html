@@ -29,8 +29,44 @@
         <img class="logo" src="assets/html_css_js.png" alt="logo">
         <h1>City Builder</h1>
     </header>
-
     <main>
+        <section class="details">
+            <div class="select" id="location">
+                <select id="location-select">
+                    <option value="1"> Underwater</option>
+                    <option value="2">Outer Space</option>
+                    <option value="3">In the Sky</option>
+                    <option value="4">Subterranean</option>
+                </select>
+                <img id="location-img" src="#" />
+
+            </div>
+            <div class="select" id="architecture">
+                <select id="architecture-select">
+                    <option value="1"> Modern </option>
+                    <option value="2"> Classical</option>
+                    <option value="3">Art Deco</option>
+                    <option value="4">Gothic</option>
+                </select>
+                <img id="architecture-img" src="#" />
+            </div>
+            <div class="select" id="Known-for">
+                <select id="popularity-select">
+                    <option value="1"> Food</option>
+                    <option value="2"> Music</option>
+                    <option value="3">Libraries</option>
+                    <option value="4"> Dolls</option>
+                </select>
+                <img id="popularity-img" src="#" />
+            </div>
+        </section>
+        <section class="slogan">
+            <h3> City Slogans</h3>
+            <input id="slogan-input" type="text" />
+            <button id="slogan-btn">Add</button>
+            <div id="slogan-list"></div>
+        </section>
+
 
     </main>
 
