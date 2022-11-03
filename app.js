@@ -22,22 +22,37 @@ let popularityCounter = 0;
 /* Events */
 locationSelect.addEventListener('change', (e) => {
     const value = e.target.value;
-    locationImage.src = `./assets/location-${value}.jpeg`;
+    locationImage.src = `./assets/Location-${value}.jpeg`;
     locationCounter++;
 });
 
 architectureSelect.addEventListener('change', (e) => {
     const value = e.target.value;
-    architectureImage.src = `./assets/location-${value}.jpeg`;
+    architectureImage.src = `./assets/Architecture-${value}.jpeg`;
     architectureCounter++;
 });
 
 popularitySelect.addEventListener('change', (e) => {
     const value = e.target.value;
-    popularityImage.src = `./assets/location-${value}.jpeg`;
+    popularityImage.src = `./assets/Known-${value}.jpeg`;
     popularityCounter++;
 });
 
+sloganBtn.addEventListener('click', (e) => {
+    slogans.push(sloganInput.value);
+    displaySlogans();
+});
+
 /* Display Functions */
+
+function displaySlogans() {
+    sloganList.textContent = '';
+    for (let slogan of slogans) {
+        const p = document.createElement('p');
+        p.textContent = slogan;
+        sloganList.append(p);
+    }
+}
+
 
 // (don't forget to call any display functions you want to run on page load!)
