@@ -1,27 +1,54 @@
-## The Golden Rule:
+![](./assets/City%20Builder%20Wireframe.png)
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+HTML
+Slice 1 - Location
+section for dropdowns
+div
+label
+select - option for each img with value img
+counter div
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+Slice 2 - Architecture
+duplicate above for Architecture
 
-## Making a plan
+Slice 3 - Known For
+duplicate above for Known For
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
-1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
-1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
-1. **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+Slice 4 - City Slogans
+label
+input for phrases
+add button
+ul for list display
 
-Additional considerations:
+STATE
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+-   location changes (counter) = slice 1
+-   Architecture changes (counter) = slice 2
+-   Known For changes (counter) = slice 3
+-   City Slogan Array = slice 4
+
+EVENTS
+
+Slice 1
+
+-   Location select (on change)
+    -   user selection used for img display
+    -   increment counter
+    -   update view (display state change)
+
+Slice 2
+
+-   Architecture Select (on change)
+    -   Same as Location
+
+Slice 3
+
+-   Known For Select (on change)
+    -   Same as Location
+
+Slice 4
+
+-   'Add' Button (on click)
+    -   push user's into city slogans to display in state
+    -   display all phrases
+    -   reset the input value

@@ -20,20 +20,64 @@
     <!-- css -->
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
-
+    <link rel="stylesheet" href="styles/style.css" <!-- add link for page specific css -->
 </head>
 
 <body>
     <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
+        <img class="logo" src="assets/html_css_js.png" alt="logo" />
     </header>
-
     <main>
-
+        <h1 id="city-slogans">Enter City</h1>
+        <section class="details">
+            <div class="select" id="location">
+                <h3>Where would you like to live?</h3>
+                <select id="location-select" class="dropdown">
+                    <option value="1">Underwater</option>
+                    <option value="2">Outer Space</option>
+                    <option value="3">In the Sky</option>
+                    <option value="4">Subterranean</option>
+                </select>
+                <img id="location-img" src="./assets/Location-1.jpeg" />
+            </div>
+            <div class="select" id="architecture">
+                <h3>What type of architecture would you like?</h3>
+                <select id="architecture-select" class="dropdown">
+                    <option value="1">Modern</option>
+                    <option value="2">Classical</option>
+                    <option value="3">Art Deco</option>
+                    <option value="4">Gothic</option>
+                </select>
+                <img id="architecture-img" src="./assets/Architecture-1.jpeg" />
+            </div>
+            <div class="select" id="Known-for">
+                <h3>What is your city known for?</h3>
+                <select id="popularity-select" class="dropdown">
+                    <option value="1">One of a kind foods</option>
+                    <option value="2">Live Music</option>
+                    <option value="3">Grand Libraries</option>
+                    <option value="4">Historic Dolls</option>
+                </select>
+                <img id="popularity-img" src="./assets/Known-1.jpeg" />
+            </div>
+        </section>
+        <section class="city">
+            <h3>Name your city!</h3>
+            <input id="city-input" type="text">
+            <button id="city-btn">Add</button>
+        </section>
+        <section class="slogan">
+            <h3>Give your city a slogan!</h3>
+            <input id="slogan-input" type="text" />
+            <button id="slogan-btn">Add</button>
+        </section>
+        <div id="stats">
+            <p id="report"></p>
+            <div id="slogan-list"></div>
+            <div id="city-list"></div>
+        </div>
+        </div>
     </main>
-
 </body>
 
 </html>
