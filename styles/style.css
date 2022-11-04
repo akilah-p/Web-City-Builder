@@ -1,0 +1,20 @@
+.details {
+    display: flex;
+    flex-direction: row;
+}
+.select {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.select img {
+    width: 250px;
+    height: fit-content;
+    margin: 2px;
+}
+
+.dropdown select {
+    width: auto;
+    height: ;
+}
