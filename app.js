@@ -27,7 +27,7 @@ let slogans = [];
 let locationCounter = 0;
 let architectureCounter = 0;
 let popularityCounter = 0;
-let citySlogans = `${cities}: ${slogans}`;
+
 
 /* Events */
 
@@ -58,11 +58,13 @@ popularitySelect.addEventListener('change', (e) => {
 sloganBtn.addEventListener('click', (e) => {
     slogans.push(sloganInput.value);
     displaySlogans();
+    displayNameSlogan();
 });
 
 cityNameBtn.addEventListener('click', (e) => {
     cities.push(cityNameInput.value);
     displayCities();
+    displayNameSlogan();
 });
 
 /* Display Functions */
@@ -74,6 +76,16 @@ function displayStats() {
     const statsString = createStatsString(locationCounter, architectureCounter, popularityCounter);
 
     reportEl.textContent = statsString;
+}
+
+function createCitySlogan(city, slogan) {
+    return `${city}: ${slogan}`;
+}
+
+function displayNameSlogan() {
+    citySlogan.textContent = '';
+    const nameSlogan = createCitySlogan(cities, slogans);
+    citySlogan.textContent = nameSlogan;
 }
 
 function displayCities() {
@@ -94,13 +106,6 @@ function displaySlogans() {
     }
 }
 
-function displayCitySlogan() {
-    citySlogan.textContent = '';
-    for (let citySlogan of citySlogans) {
-        const h1 = document.createElement('h1');
-        h1.textContent = citySlogan;
-        citySlogan.append(h1);
-    }
-}
+
 
 // (don't forget to call any display functions you want to run on page load!)
