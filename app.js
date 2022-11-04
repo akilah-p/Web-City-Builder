@@ -60,8 +60,6 @@ sloganBtn.addEventListener('click', (e) => {
 cityNameBtn.addEventListener('click', (e) => {
     cities.push(cityNameInput.value);
     displayCities();
-
-
 });
 
 /* Display Functions */
@@ -80,16 +78,16 @@ function displayCities() {
     for (let city of cities) {
         const p = document.createElement('p');
         p.textContent = city;
-        sloganList.append(p);
+        cityNameList.append(p);
     }
 }
 
 function displaySlogans() {
     sloganList.textContent = '';
     for (let slogan of slogans) {
-        const p = document.createElement('p');
-        p.textContent = slogan;
-        sloganList.append(p);
+        const q = document.createElement('q');
+        q.textContent = slogan;
+        sloganList.append(q);
     }
 }
 
