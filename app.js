@@ -10,6 +10,10 @@ const architectureImage = document.getElementById('architecture-img');
 const popularitySelect = document.getElementById('popularity-select');
 const popularityImage = document.getElementById('popularity-img');
 
+const cityNameBtn = document.getElementById('city-btn');
+const cityNameInput = document.getElementById('city-input');
+const cityNameList = document.getElementById('city-list');
+
 const sloganBtn = document.getElementById('slogan-btn');
 const sloganInput = document.getElementById('slogan-input');
 const sloganList = document.getElementById('slogan-list');
@@ -17,6 +21,7 @@ const sloganList = document.getElementById('slogan-list');
 const reportEl = document.getElementById('report');
 
 /* State */
+let city = [];
 let slogans = [];
 let locationCounter = 0;
 let architectureCounter = 0;
@@ -63,6 +68,15 @@ function displayStats() {
     reportEl.textContent = statsString;
 }
 
+function displayCityName() {
+    cityNameList.textContent = '';
+    for (let city of cities) {
+        const p = document.createElement('p');
+        p.textContent = city;
+        sloganList.append(p);
+    }
+}
+
 function displaySlogans() {
     sloganList.textContent = '';
     for (let slogan of slogans) {
@@ -71,6 +85,5 @@ function displaySlogans() {
         sloganList.append(p);
     }
 }
-
 
 // (don't forget to call any display functions you want to run on page load!)
