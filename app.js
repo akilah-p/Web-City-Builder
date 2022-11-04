@@ -19,6 +19,7 @@ const sloganInput = document.getElementById('slogan-input');
 const sloganList = document.getElementById('slogan-list');
 
 const reportEl = document.getElementById('report');
+const citySlogan = document.getElementById('city-slogans');
 
 /* State */
 let cities = [];
@@ -26,6 +27,8 @@ let slogans = [];
 let locationCounter = 0;
 let architectureCounter = 0;
 let popularityCounter = 0;
+let citySlogans = `${cities}: ${slogans}`;
+
 /* Events */
 
 locationSelect.addEventListener('change', (e) => {
@@ -85,9 +88,18 @@ function displayCities() {
 function displaySlogans() {
     sloganList.textContent = '';
     for (let slogan of slogans) {
-        const q = document.createElement('q');
-        q.textContent = slogan;
-        sloganList.append(q);
+        const p = document.createElement('p');
+        p.textContent = slogan;
+        sloganList.append(p);
+    }
+}
+
+function displayCitySlogan() {
+    citySlogan.textContent = '';
+    for (let citySlogan of citySlogans) {
+        const h1 = document.createElement('h1');
+        h1.textContent = citySlogan;
+        citySlogan.append(h1);
     }
 }
 
