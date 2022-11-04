@@ -21,7 +21,7 @@ const sloganList = document.getElementById('slogan-list');
 const reportEl = document.getElementById('report');
 
 /* State */
-let city = [];
+let cities = [];
 let slogans = [];
 let locationCounter = 0;
 let architectureCounter = 0;
@@ -57,9 +57,16 @@ sloganBtn.addEventListener('click', (e) => {
     displaySlogans();
 });
 
+cityNameBtn.addEventListener('click', (e) => {
+    cities.push(cityNameInput.value);
+    displayCities();
+
+
+});
+
 /* Display Functions */
 function createStatsString(locationNum, architectureNum, popularityNum) {
-    return `You have changed the location ${locationNum} times, the architecture ${architectureNum} times, and the known for ${popularityNum} times. And who can forget that incredible city slogan.`;
+    return `You have changed the location ${locationNum} times, the architecture ${architectureNum} times, and the known for ${popularityNum} times. And who can forget that incredible city name and city slogan.`;
 }
 
 function displayStats() {
@@ -68,7 +75,7 @@ function displayStats() {
     reportEl.textContent = statsString;
 }
 
-function displayCityName() {
+function displayCities() {
     cityNameList.textContent = '';
     for (let city of cities) {
         const p = document.createElement('p');
